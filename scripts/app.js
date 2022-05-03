@@ -1,10 +1,10 @@
 console.log('Hello, front end');
-​
+
 let temp = 0
 let unit = "Farenheight" // setting to default , will overwrite 
 //from google: (32°F − 32) × 5/9 = 0°C
 //from google: (0°C × 9/5) + 32 = 32°F
-​
+
 const changeTempUnit = function(tempParam, unitParam) {
     if(unitParam === "Farenheight"){
         // if unit is f, change to c
@@ -17,7 +17,7 @@ const changeTempUnit = function(tempParam, unitParam) {
     }
 }
 console.log(changeTempUnit("32", "Celsius"), 'CHANGE TEMP <<<')
-​
+
 document.addEventListener("DOMContentLoaded", function(){
     // BABY STEPS: log interaction happened
     // select the submit btn && add event listener
@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", function(){
         // save the user input to variable
         const userInput = document.querySelector("#input")
         // console.log(userInput.value, '<<<')
-​
+
         // set globabl temp to value of userInput
         temp = userInput.value
-​
+
         let answer = changeTempUnit(temp, unit)
-        
+        console.log(answer)
         //select the result p tag and set text to be global temp 
         const resultEl = document.querySelector("#result")
         resultEl.innerText = answer
